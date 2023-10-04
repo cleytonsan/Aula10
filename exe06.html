@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 18pt arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Hey
+    </div> -->
+
+    <div id="area">
+        Hey
+    </div>
+    <script>
+        var a = document.getElementById('area')
+        addEventListener('click', clicar)
+        addEventListener('mouseenter', entrar)
+        addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'brown'
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou!'
+            a.style.background = 'red'
+        }
+
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'blue'
+        }
+
+
+        // function clicar() {
+        //     var a = document.getElementById('area')
+        //     a.innerText = 'Clicou!'
+        //     a.style.background = 'brown'
+        // }
+
+        // function entrar(){
+        //     var enter = document.getElementById('area')
+        //     enter.innerText = 'Entrou!'
+        //     enter.style.background = 'red'
+        // }
+
+        // function sair(){
+        //     var s = document.getElementById('area')
+        //     s.innerText = 'Saiu!'
+        //     s.style.background = 'blue'
+        // }
+    </script>
+</body>
+</html>
